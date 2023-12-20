@@ -10,6 +10,7 @@ import Usluge from "./stranice/Usluge";
 import Kontakt from "./stranice/Kontakt";
 import Login from "./stranice/Login";
 import { Container } from 'react-bootstrap';
+import Footer from "./komponente/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
 
             </Routes>
             </Container>
+            <Footer/>
         </BrowserRouter>
        
     </>
