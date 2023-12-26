@@ -18,7 +18,7 @@ function App() {
     
     <BrowserRouter>
             <Meni/>
-            <Container>
+            <Container className="glavniKontejner"> 
             <Routes>
                 <Route path="/" element={<Pocetna/>}/>
                 <Route path="/onama" element={<ONama />}/>
