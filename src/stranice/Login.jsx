@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button, Col, Form, Row} from "react-bootstrap";
 import useForm from '../hooks/UseForm';
-import axios from "../data-axios/axios-api"
+import axios from "../axios-instance/axios"
 const Login = () => {
 
     const [loginErrors, setLoginErrors] = useState([]);
