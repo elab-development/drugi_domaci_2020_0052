@@ -1,19 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Button, Col, Form, Row} from "react-bootstrap";
 import useForm from '../hooks/UseForm';
-import axios from '../axios-instance/axios';
-
+import axios from "../data-axios/axios-api"
 const Login = () => {
 
+    const [loginErrors, setLoginErrors] = useState([]);
+
     const onclick = () => {
+        setLoginErrors([]);
         const data = axios.post('/login', formData)
             .then((response) => {
                 console.log(response);
-            }, (error) => {
-                console.log(error + 'error');
+                let token = response.data.data.token;
+                alert('Uspesno ste se ulogovali!' + token);
+            }).catch((error) => {
+                console.log(error);
+                setLoginErrors(["Greska prilikom logovanja! Proverite podatke"]);
             });
+
         alert('Uspesno ste se ulogovali!');
-        console.log(formData);
+        console.log(data);
     }
 
     const onclickRegister = () => {
@@ -54,6 +60,13 @@ const Login = () => {
                         </Form.Group>
                         <Button onClick={onclick} variant="primary" type="button" >Login </Button>
                     </Form>
+                    {
+                        loginErrors.map((error, index) => {
+                            return (
+                                <p key={index}>{error}</p>
+                            )
+                        })
+                    }
                 </Col>
                 <Col>
                     <Form>
@@ -77,4 +90,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Login;
