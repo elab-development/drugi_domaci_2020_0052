@@ -1,10 +1,17 @@
 import React from 'react';
 import {Button, Col, Form, Row} from "react-bootstrap";
 import useForm from '../hooks/UseForm';
+import axios from '../axios-instance/axios';
 
 const Login = () => {
 
     const onclick = () => {
+        const data = axios.post('/login', formData)
+            .then((response) => {
+                console.log(response);
+            }, (error) => {
+                console.log(error + 'error');
+            });
         alert('Uspesno ste se ulogovali!');
         console.log(formData);
     }
