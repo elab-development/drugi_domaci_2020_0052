@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import {Button, Col, Form, Row} from "react-bootstrap";
+import {Button, Col, Form, Row, Alert} from "react-bootstrap";
 import useForm from '../hooks/UseForm';
-import axios from "../axios-instance/axios"
+import axios from "../axios-instance/axios";
+
 const Login = () => {
 
     const [loginErrors, setLoginErrors] = useState([]);
+    const [message, setMessage] = useState(null);
 
     const onclick = () => {
         setLoginErrors([]);
@@ -24,8 +26,20 @@ const Login = () => {
     }
 
     const onclickRegister = () => {
-        alert('Uspesno ste se registrovali!');
-        console.log(formDataRegister);
+        const postData = {
+            name: formDataRegister.nameRegister,
+            email: formDataRegister.emailRegister,
+            password: formDataRegister.passwordRegister,
+            confirm_password: formDataRegister.passwordRegister
+        }
+
+        setLoginErrors([]);
+        const data = axios.post('/register', postData)
+            .then((response) => {
+                setMessage("Uspesno ste se registrovali, molimo vas, loginujte se sa ovim podacima!");
+            }).catch((error) => {
+                setLoginErrors(["Greska prilikom registracije! Proverite podatke"]);
+            });
     }
 
     const initialState = {
@@ -85,6 +99,9 @@ const Login = () => {
                         </Form.Group>
                         <Button onClick={onclickRegister} variant="primary" type="button" >Registracija </Button>
                     </Form>
+                    {
+                        message && <Alert className="mt-3" title="Uspesno" variant="success" > {message} </Alert>
+                    }
                 </Col>
             </Row>
         </div>
