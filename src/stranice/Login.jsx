@@ -12,15 +12,16 @@ const Login = () => {
             .then((response) => {
                 console.log(response);
                 let token = response.data.data.token;
-                alert('Uspesno ste se ulogovali!' + token);
+                let user = response.data.data.user;
+
+                window.sessionStorage.setItem('token', token);
+                window.sessionStorage.setItem('user', JSON.stringify(user));
+                window.location.href = '/';
             }).catch((error) => {
                 console.log(error);
                 setLoginErrors(["Greska prilikom logovanja! Proverite podatke"]);
-            });
-
-        alert('Uspesno ste se ulogovali!');
-        console.log(data);
-    }
+            });
+    }
 
     const onclickRegister = () => {
         alert('Uspesno ste se registrovali!');

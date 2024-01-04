@@ -2,6 +2,7 @@ import React from 'react';
 import {Container, Nav, Navbar} from "react-bootstrap";
 
 const Meni = () => {
+    const ulogovanUser = window.sessionStorage.getItem('token') !== null;
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
@@ -15,7 +16,12 @@ const Meni = () => {
                             <Nav.Link href="/usluge">Usluge</Nav.Link>
                             <Nav.Link href="/faq">FAQ</Nav.Link>
                             <Nav.Link href="/kontakt">Kontakt</Nav.Link>
-                            <Nav.Link href="/login">Login</Nav.Link>
+                            {
+                                ulogovanUser ?
+                                    <Nav.Link href="/logout">Logout</Nav.Link>
+                                    :
+                                    <Nav.Link href="/login">Login</Nav.Link>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
