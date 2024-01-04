@@ -18,7 +18,11 @@ const Meni = () => {
                             <Nav.Link href="/kontakt">Kontakt</Nav.Link>
                             {
                                 ulogovanUser ?
-                                    <Nav.Link href="/logout">Logout</Nav.Link>
+                                <Nav.Link href="#" onClick={() => {
+                                    window.sessionStorage.removeItem('token');
+                                    window.sessionStorage.removeItem('user');
+                                    window.location.href = '/';
+                                }}>Logout</Nav.Link>
                                     :
                                     <Nav.Link href="/login">Login</Nav.Link>
                             }
