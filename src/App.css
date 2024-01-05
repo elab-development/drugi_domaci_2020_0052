@@ -1,3 +1,14 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: #fff;
+  color: #555555;
+  font-family: "Barlow", sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+
 .App {
   text-align: center;
 }
@@ -15,13 +26,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
 }
 
 .App-link {
@@ -36,8 +47,6 @@
     transform: rotate(360deg);
   }
 }
-
-
 
 .glavniKontejner {
   min-height: 86vh;
