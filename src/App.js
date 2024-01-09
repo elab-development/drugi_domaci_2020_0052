@@ -11,6 +11,8 @@ import Kontakt from "./stranice/Kontakt";
 import Login from "./stranice/Login";
 import { Container } from 'react-bootstrap';
 import Footer from "./komponente/Footer";
+import Prijavi from "./stranice/Prijavi";
+import Zakazi from "./stranice/Zakazi";
 
 function App() {
   return (
@@ -25,7 +27,9 @@ function App() {
                 <Route path="/usluge" element={<Usluge />}/>
                 <Route path="/faq" element={<Faq/>}/>
                 <Route path="/kontakt" element={<Kontakt />}/>
-                <Route path="/login" element={<Login />}/>
+                <Route path="/prijavi" element={<Prijavi />}/>
+                <Route path="/zakazi" element={<Zakazi />}/>
+                <Route path="/login" element={<Login />}/>
 
             </Routes>
             </Container>
