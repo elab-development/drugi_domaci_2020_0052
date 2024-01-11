@@ -31,7 +31,7 @@ const Faq = () => {
                 <div className="App-header">
                     <h1>FAQ</h1>
                     <p>
-                        odogovori na najcesca pitanja
+                        odgovori na najčešća pitanja
                     </p>
                 </div>
                 <Row>

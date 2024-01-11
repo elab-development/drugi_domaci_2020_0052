@@ -10,7 +10,7 @@ const ONama = () => {
             <Row>
                 <h1 className="text-center">O nama</h1>
                 <p>
-                    Kreatori ove aplikacije su studenti FON-a, smer Informacione tehnologije, koji su se okupili u tim i odlučili da naprave aplikaciju koja će pomoći ljudima da lakše resavaju probleme sa drzavom.
+                    Kreatori ove aplikacije su studenti Fakulteta organizacionih nauka, smer Informacioni sistemi i tehnologije, koji su formirali tim sa ciljem da naprave aplikaciju koja će pomoći ljudima da lakše rešavaju probleme koji se tiču državnih usluga.
                 </p>
             </Row>
 
