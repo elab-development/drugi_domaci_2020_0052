@@ -62,7 +62,7 @@ const Prijavi = () => {
                 <div className="App-header">
                     <h1>Ovo je stranica</h1>
                     <p>
-                        za prijavu problema koje muce gradjane
+                        za prijavu problema od strane gradjana
                     </p>
                 </div>
                 <Row>
