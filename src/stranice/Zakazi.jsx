@@ -43,7 +43,7 @@ const Zakazi = () => {
                 let responseData = response.data;
                 console.log(responseData);
                 if (responseData.status === 'success') {
-                    let poruka = responseData.message + ". Dobicete dalja upustva na vasu registrovanu email adresu.";
+                    let poruka = responseData.message + ". Dobicete dalja uputstva na Vašu registrovanu email adresu.";
                     setPoruka(poruka);
                 } else {
                     setPoruka(responseData.message);
@@ -51,7 +51,7 @@ const Zakazi = () => {
 
             }).catch((error) => {
                 console.log(error);
-                setPoruka("Doslo je do greske, pokusajte ponovo.");
+                setPoruka("Došlo je do greške, pokušajte ponovo.");
             })
     }
 
@@ -60,7 +60,7 @@ const Zakazi = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>Posalji zahtev za uslugom</h2>
+                        <h2>Pošalji zahtev za traženu uslugu</h2>
                         <Form>
                             <Form.Select name="usluga_id" onChange={handleChange} size="lg">
                                 <option value="0">Izaberi uslugu</option>
@@ -73,7 +73,7 @@ const Zakazi = () => {
                                 }
                             </Form.Select>
                             <hr/>
-                            <Button onClick={zakaziUslugu} variant="primary" type="button">Zakazi uslugu</Button>
+                            <Button onClick={zakaziUslugu} variant="primary" type="button">Zakaži uslugu</Button>
                         </Form>
                         <p>{poruka}</p>
                     </Col>

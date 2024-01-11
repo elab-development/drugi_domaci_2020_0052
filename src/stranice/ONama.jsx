@@ -15,8 +15,8 @@ const ONama = () => {
             </Row>
 
             <Row>
-                <ProfilONama ime="Ana Boskovic" opis="Ana je studentkinja 4. godine osnovnih studija na Fakultetu organizacionih nauka, smer Informacione tehnologije. U slobodno vreme se bavi sportom i voli da putuje sa Bogdanom." slika={ana}  />
-                <ProfilONama ime="Bogdana Bradic" opis="Bogdana je studentkinja 4. godine osnovnih studija na Fakultetu organizacionih nauka, smer Informacione tehnologije. U slobodno vreme se bavi muzikom i voli da putuje sa Anom." slika={bogdana}  />
+                <ProfilONama ime="Ana Boskovic" opis="Ana je studentkinja 4. godine osnovnih akademskih studija na Fakultetu organizacionih nauka, smer Informacioni sistemi i tehnologije. U slobodno vreme se bavi sportom i voli da putuje sa Bogdanom." slika={ana}  />
+                <ProfilONama ime="Bogdana Bradic" opis="Bogdana je studentkinja 4. godine osnovnih akademskih studija na Fakultetu organizacionih nauka, smer Informacioni sistemi i tehnologije. U slobodno vreme se bavi muzikom i voli da putuje sa Anom." slika={bogdana}  />
             </Row>
         </div>
     );

@@ -22,14 +22,14 @@ const Pocetna = () => {
                             <Image src={slika1} fluid={true}/>
                             <Carousel.Caption>
                                 <h3>Dobrodošli</h3>
-                                <p>Mi vam možemo pomoci</p>
+                                <p>Mi Vam možemo pomoci</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <Image src={slika2}  fluid={true}/>
                             <Carousel.Caption>
-                                <h3>Ne morate vise cekati u redovima</h3>
-                                <p>Sada mozete i online odraditi birokratske usluge</p>
+                                <h3>Ne morate više čekati u redovima</h3>
+                                <p>Sada možete i online odraditi birokratske usluge</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -37,7 +37,7 @@ const Pocetna = () => {
                             <Carousel.Caption>
                                 <h3>Birokratija na dohvat ruke</h3>
                                 <p>
-                                    Konacno mozete odraditi sve usluge iz udobnosti svog doma
+                                    Konačno možete odraditi sve usluge iz udobnosti svog doma
                                 </p>
                             </Carousel.Caption>
                         </Carousel.Item>
