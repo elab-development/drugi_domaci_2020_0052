@@ -87,7 +87,7 @@ const Login = () => {
                     <Form>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
                             <Form.Label>Ime i prezime</Form.Label>
-                            <Form.Control onChange={handleChangeRegister} name="nameRegister" type="text" placeholder="Ivica i Marica" />
+                            <Form.Control onChange={handleChangeRegister} name="nameRegister" type="text" placeholder="Petar Petrovic" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
                             <Form.Label>Email address</Form.Label>
