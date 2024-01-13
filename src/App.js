@@ -30,7 +30,7 @@ function App() {
                 <Route path="/kontakt" element={<Kontakt />}/>
                 <Route path="/prijavi" element={<Prijavi />}/>
                 <Route path="/zakazi" element={<Zakazi />}/>
-                <Route path="/login" element={<Login />}/>
+                <Route path="/login" element={<Login/>}/>
                 <Route path="/saradnici" element={<Saradnici />}/>
 
             </Routes>
