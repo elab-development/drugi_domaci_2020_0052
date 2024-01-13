@@ -3,7 +3,14 @@ import {Container, Nav, Navbar} from "react-bootstrap";
 
 const Meni = () => {
 
-    const ulogovanUser = window.sessionStorage.getItem('token') !== null
+    const ulogovanUser = window.sessionStorage.getItem('token') !== null;
+
+    let admin = false;
+
+    if (ulogovanUser) {
+        const user = JSON.parse(window.sessionStorage.getItem('user'));
+        admin = user.role === 'admin';
+    }
 
     return (
         <>
@@ -29,8 +36,21 @@ const Meni = () => {
                                     :
                                     null
                             }
+                            <Nav.Link href="/saradnici">Saradnici</Nav.Link>
                             <Nav.Link href="/faq">FAQ</Nav.Link>
                             <Nav.Link href="/kontakt">Kontakt</Nav.Link>
+
+                            {
+                                admin ?
+                                    <Nav.Link href="/admin"><span style={
+                                        {
+                                            color: 'red'
+                                        }
+                                    }>Admin</span></Nav.Link>
+                                    :
+                                    null
+                            }
+
                             {
                                 ulogovanUser ?
                                     <Nav.Link href="#" onClick={() => {

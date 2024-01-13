@@ -13,6 +13,7 @@ import { Container } from 'react-bootstrap';
 import Footer from "./komponente/Footer";
 import Prijavi from "./stranice/Prijavi";
 import Zakazi from "./stranice/Zakazi";
+import Saradnici from './stranice/Saradnici';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/prijavi" element={<Prijavi />}/>
                 <Route path="/zakazi" element={<Zakazi />}/>
                 <Route path="/login" element={<Login />}/>
+                <Route path="/saradnici" element={<Saradnici />}/>
 
             </Routes>
             </Container>
