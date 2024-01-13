@@ -14,6 +14,7 @@ import Footer from "./komponente/Footer";
 import Prijavi from "./stranice/Prijavi";
 import Zakazi from "./stranice/Zakazi";
 import Saradnici from './stranice/Saradnici';
+import Admin from './stranice/Admin';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/zakazi" element={<Zakazi />}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/saradnici" element={<Saradnici />}/>
+                <Route path="/admin" element={<Admin />}/>
 
             </Routes>
             </Container>
