@@ -3,6 +3,7 @@ import axiosInstance from "../axios-instance/axios";
 import {Button, Col, Container, Row} from "react-bootstrap";
 import {Chart} from "react-google-charts";
 import Tabela from "../komponente/Tabela";
+import {CSVLink} from "react-csv";
 
 const Admin = () => {
 
@@ -50,6 +51,25 @@ const Admin = () => {
                 console.log(error);
             });
     }, []);
+
+    const [csvData, setCsvData] = React.useState([]);
+    const csvHeaders = [
+        { label: "ID", key: "id" },
+        { label: "Ime i prezime", key: "imePrezime" },
+        { label: "Usluga", key: "usluga" },
+        { label: "Datum", key: "datum" }
+    ];
+
+    React.useEffect(() => {
+        sviZahtevi.map((item) => {
+            setCsvData(oldArray => [...oldArray, {
+                id: item.id,
+                imePrezime: item.user.name,
+                usluga: item.usluga.nazivUsluge,
+                datum: item.datumUsluge
+            }]);
+        });
+    },[sviZahtevi]);
 
     const filtrirajZahteve = (id) => {
         console.log('zahtevi');
@@ -151,9 +171,17 @@ const Admin = () => {
                         }
                     </Col>
                 </Row>
+                <Row>
+                    <div className="download-csv">
+                        <CSVLink  data={csvData} headers={csvHeaders}>
+                            Download CSV
+                        </CSVLink>
+                    </div>
+                </Row>
+
             </Container>
         </>
     );
 };
 
-export default Admin;
+export default Admin;

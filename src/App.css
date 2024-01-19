@@ -43,6 +43,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -50,4 +51,18 @@ body {
 
 .glavniKontejner {
   min-height: 86vh;
+}
+
+.download-csv {
+  margin: 10px;
+  background-color: #0b2e13;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px !important;
+}
+
+.download-csv a {
+  text-decoration: none;
+  color: #fff;
 }
