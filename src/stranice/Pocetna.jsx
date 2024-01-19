@@ -24,8 +24,8 @@ const Pocetna = () => {
     }
 
     const podaci = [
-        'Odlicna ekipa, prezadovoljna sam praksom u E-upravi, preporucujem svima',
-        'Odusevljen sam uslugama koje pruza E-uprava, sve pohvale za njihov rad',
+        'Odlična ekipa, prilika da se stekne znanje u praksi i sve pohvale za kadar E-uprave.',
+        'Oduševljen sam uslugama koje pruža E-uprava, sve pohvale za njihov rad.',
     ];
 
     return (
